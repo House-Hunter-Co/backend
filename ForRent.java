@@ -16,11 +16,12 @@ public class ForRent extends Houses {
     public int houseId = 2000;
     public double discount = 0.0;
 
-    public ForRent(String city, Owner owner, String rentOrsaile, double mounthlyRent) {
+    public ForRent(String city, Owner owner, String rentOrsaile, double mounthlyRent,double discount) {
         
         super(city, owner, rentOrsaile, mounthlyRent);
-
         this.numberOfMounthes = numberOfMounthes;
+        this.discount = discount;
+        houseId++;
     }
 
     public int getNumberOfMounthes() {
@@ -35,8 +36,8 @@ public class ForRent extends Houses {
 
     public double getAllPaiment() {
 
-        allPaiment = (mounthlyRent * numberOfMounthes);
-        return allPaiment - this.discount;
+        allPaiment = (mounthlyRent * numberOfMounthes)-(this.discount*numberOfMounthes);
+        return allPaiment ;
     }
 
     public double getMounthlyRent() {
@@ -90,7 +91,7 @@ public class ForRent extends Houses {
 
     }
     public String toStringForCustomer() {
-    return "ForRent{" + "City " + this.city + "mounthlyRent= " + mounthlyRent + ", numberOfMounthes= " + numberOfMounthes + ", allPaiment= " + allPaiment + ", houseId= " + houseId + "Owner " + this.owner.toString() + "Discount " + this.discount + '}';
+    return "ForRent{" + "City " + this.city + "mounthlyRent= " + mounthlyRent + ", numberOfMounthes= " + numberOfMounthes +  ", houseId= " + houseId + "Owner " + this.owner.toString() + "Discount " + this.discount + '}';
 }
 
     public String toStringForOwner() {
