@@ -12,9 +12,11 @@ import java.util.ArrayList;
  * @author hebil
  */
 public class Owner extends User {
-    ArrayList<Appointment> myAppointments  = new ArrayList<Appointment>();
-    public Owner(String name, String phoneNumber, String emailAddress, String password) {
-        super(name, phoneNumber, emailAddress, password);
+    ArrayList<Appointment> myAppointments  = new ArrayList<>();
+    
+    
+    public Owner(String name, String phoneNumber, String emailAddress, String password,String userType) {
+        super(name, phoneNumber, emailAddress, password, userType);
     }
     
     public static String[] myHouses;
