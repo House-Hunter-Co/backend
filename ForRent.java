@@ -11,90 +11,35 @@ package househunter;
  */
 public class ForRent extends Houses {
 
-    public int numberOfMounthes;
-    public double allPaiment;
-    public int houseId = 2000;
-    public double discount = 0.0;
+    public int houseId ;
+    private  static int idCounter = 20000;
+   
 
-    public ForRent(String city, Owner owner, String rentOrsaile, double mounthlyRent,double discount) {
-        
-        super(city, owner, rentOrsaile, mounthlyRent);
-        this.numberOfMounthes = numberOfMounthes;
-        this.discount = discount;
-        houseId++;
+    public ForRent (int houseId, String city, Owner owner, String rentOrsale,String address, String hsedetails, int Nrbedrooms, double rentorPrice, boolean isBooked) {
+       super( city,  owner,  rentOrsale,address,hsedetails,Nrbedrooms, rentorPrice,isBooked);
+       
+       houseId = idCounter++;
+       
     }
 
-    public int getNumberOfMounthes() {
+  
 
-        return numberOfMounthes;
-    }
 
-    public void setNumberOfMounthes(int numberOfMounthes) {
 
-        this.numberOfMounthes = numberOfMounthes;
-    }
-
-    public double getAllPaiment() {
-
-        allPaiment = (mounthlyRent * numberOfMounthes)-(this.discount*numberOfMounthes);
-        return allPaiment ;
-    }
-
-    public double getMounthlyRent() {
-
-        return mounthlyRent;
-    }
-
-    public void setMounthlyRent(double mounthlyRent) {
-
-        this.mounthlyRent = mounthlyRent;
-    }
-
-    public double getDiscount() {
-
-        return discount;
-    }
-
-    public void setDiscount(double discount) {
-
-        this.discount = discount;
-    }
-
+    
     @Override
     public int getHouseId() {
 
         return houseId;
     }
 
+  
+   
+    
     @Override
-    public String getCity() {
-
-        return city;
-    }
-
-    @Override
-    public void setCity(String city) {
-
-        this.city = city;
-    }
-
-    @Override
-    public String getRentOrsaile() {
-
-        return this.rentOrsaile;
-    }
-
-    @Override
-    public void setRentOrsaile(String rentOrsaile) {
-
-        this.rentOrsaile = rentOrsaile;
-
-    }
-    public String toStringForCustomer() {
-    return "ForRent{" + "City " + this.city + "mounthlyRent= " + mounthlyRent + ", numberOfMounthes= " + numberOfMounthes +  ", houseId= " + houseId + "Owner " + this.owner.toString() + "Discount " + this.discount + '}';
+    public String toString() {
+    return "ForRent{" + ", houseId= " + houseId + "City: " +  city + "Address: " +  address +"Number of bedrooms: " +  Nrbedrooms +" mounthlyRent= " + rentorPrice +  "Owner " + owner.toString() + '}';
 }
-
-    public String toStringForOwner() {
-        return "ForRent{" + "City " + this.city + "mounthlyRent= " + mounthlyRent + ", houseId= " + houseId + "Owner " + this.owner.toString() + '}';
-    }
+ 
+    
 }
