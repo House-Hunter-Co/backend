@@ -11,71 +11,29 @@ package househunter;
  */
 
 public class ForSale extends Houses {
-    public double price;
-    public int houseId = 1000;
+   public int houseId ;
+   private  static int idCounter = 10000;
 
 
-    public ForSale(){
-        
-    }
-    
-    public ForSale(String city, Owner owner, String rentOrsaile, double mounthlyRent) {
-        super(city, owner, rentOrsaile, mounthlyRent);
-        this.price = price;
-        houseId++;
+   
+     public ForSale(int houseId, String city, Owner owner, String rentOrsale, String address,String hsedetails, int Nrbedrooms, double rentorPrice, boolean isBooked) {
+       super( city,  owner,  rentOrsale,address,hsedetails,Nrbedrooms, rentorPrice,isBooked);
+        houseId = idCounter++;
 
     }
 
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    @Override
-    public String getCity() {
-        return this.city;
-    }
-    public void setCity(String city) {
-
-        this.city = city;
-    }
-
-    @Override
+ 
+   @Override
     public int getHouseId() {
         return houseId;
     }
 
 
-    public double getMounthlyRent() {
-        return mounthlyRent;
-    }
-    public void setMounthlyRent(double mounthlyRent) {
-        this.mounthlyRent = mounthlyRent;
-    }
-
-    @Override
-    public String getRentOrsaile() {
-        return this.getRentOrsaile();
+ 
+   @Override
+    public String toString() {
+       return "ForSale{" + ", houseId= " + houseId + "City: " +  city +"Address: " +  address + "Number of bedrooms: " +  Nrbedrooms +" House price= " + rentorPrice +  "Owner " + owner.toString() + '}';
     }
 
-    @Override
-    public void setRentOrsaile(String rentOrsaile) {
-
-        this.rentOrsaile = rentOrsaile;
-    }
-    
-    
-
-    //tostring methoed for customer and owner can be the same becouse it contains the same elements 
-    public String toStringForCustomer() {
-        return "ForSale{" + "City " + this.city + "price= " + price + ", houseId= " + houseId + "rentOrsaile " + this.rentOrsaile + "Owner " + this.owner + '}';
-    }
-
-    public String toStringForOwner() {
-        return "ForSale{" + "City " + this.city + "price= " + price + ", houseId= " + houseId + "rentOrsaile " + this.rentOrsaile + "Owner " + this.owner + '}';
-    }
+   
 }
