@@ -5,10 +5,19 @@
  */
 package househunter;
 
+
+
 /**
  *
  * @author hebil
  */
 public class Tenant extends User{
+    
+    public Tenant(String name, String phoneNumber, String emailAddress, String password,String userType) {
+        super(name, phoneNumber, emailAddress, password,userType);
+    }
+   
+    
+  
     
 }
