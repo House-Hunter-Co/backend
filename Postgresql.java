@@ -52,6 +52,16 @@ public class Postgresql implements DBManager {
                 " isBooked       NUMBER," +  // 0 or 1
                 " createdat      CHAR(50))";
             
+            /*These are columns for houses
+    public String city;
+    public Owner owner;
+    public String rentOrsale;
+    public String address;
+    public String hsedetails;
+    public int Nrbedrooms;
+    public double rentorPrice;
+    public boolean isBooked = false;*/
+            
             stmt.executeUpdate(sql);
             stmt.executeUpdate(sqlForHouses);
             stmt.close();
@@ -139,8 +149,7 @@ public class Postgresql implements DBManager {
         }
         return userinfo;
     }
-    
-    @Override
+     @Override
     public int insertHouse(String city,String owner,String rentOrsaile,String mounthlyRent) {
         Timestamp timeStamp = new Timestamp(System.currentTimeMillis());
         try {
@@ -151,4 +160,27 @@ public class Postgresql implements DBManager {
         }
         return 1;
     }
+//@huseyin could you please implement the following  
+
+/*
+    public String getHouseDetailsById(int houseid)  // returns only one house with the id given
+    public ArrayList<String> getHousesforRent(String Rentorsale)   
+    public ArrayList<String> getHousesforSale(String Rentorsale)
+    public ArrayList<String> getHousesbycity(String Rentorsale)
+    public ArrayList<String> getHousesbyowner(Owner sahibi)
+    public ArrayList<String> getHousesbyrentorprice(double rentorprice) // returns houses with that  price or less than that price
+    public ArrayList<String> getHousesbynumofbedrooms(int Nrbedrooms)
+    public Owner getOwnerbyhseId(int hseid)  // returns owner of the house with the houseid parameter passed
+    public void deletebookedhouses()  // if isbooked == true delete house from table
+    
+    
+    
+ */   
+     
+    
+    
+   
+    
+    
+    
 }
