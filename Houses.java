@@ -12,39 +12,38 @@ package househunter;
 
 public abstract class Houses {
 
-    private int houseId;
+   
     public String city;
     public Owner owner;
-    public String rentOrsaile;
-    public double mounthlyRent;
-    public boolean isBooked;
+    public String rentOrsale;
+    public String address;
+    public String hsedetails;
+    public int Nrbedrooms;
+    public double rentorPrice;
+    public boolean isBooked = false;
 
-    public Houses(String city, Owner owner, String rentOrsaile, double mounthlyRent) {
-        this.owner = owner;
-        this.rentOrsaile = rentOrsaile;
+    public Houses( String city, Owner owner, String rentOrsale, String address, String hsedetails, int Nrbedrooms, double rentorPrice, boolean isBooked) {
         this.city = city;
-        //insertHouse();
+        this.owner = owner;
+        this.rentOrsale = rentOrsale;
+        this.address = address;
+        this.hsedetails = hsedetails;
+        this.Nrbedrooms = Nrbedrooms;
+        this.rentorPrice = rentorPrice;
+        this.isBooked = isBooked;
     }
-    
-    
-    
-    public abstract String getCity();
 
-    public abstract void setCity(String city);
+    
+
+   
 
     public abstract int getHouseId();
 
-    public abstract String getRentOrsaile();
+    public abstract String toString();
 
-    public abstract void setRentOrsaile(String rentOrsaile);
+  
 
-    public abstract String toStringForCustomer();
-
-    public abstract String toStringForOwner();
-
-    public abstract double getMounthlyRent();
-
-    public abstract void setMounthlyRent(double mounthlyRent);
+  
     
     
 }
