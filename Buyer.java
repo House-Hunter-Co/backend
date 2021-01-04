@@ -9,6 +9,12 @@ package househunter;
  *
  * @author hebil
  */
-public class Buyer extends User {
+public class Buyer extends User 
+{
+    public Buyer(String name, String phoneNumber, String emailAddress, String password,String userType) {
+        super(name, phoneNumber, emailAddress, password,userType);
+    }
+   
+   
     
 }
