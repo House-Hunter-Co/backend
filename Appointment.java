@@ -74,6 +74,4 @@ public class Appointment {
 }
 /*Add the code below to House owner class*/
 /*        
-
-
 */

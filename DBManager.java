@@ -13,6 +13,6 @@ public interface DBManager {
     int get();
     int delete(int id);
     int update();
-    int insertUser(String name,String phoneNumber,String emailAddress,String password);
-    int insertHouse(String city,String phoneNumber,String emailAddress,String password);
+    int insertUser(String name,String phoneNumber,String emailAddress,String password,String userType);
+    int insertHouse(String city,int owner,String rentOrsale,String address,String hsedetails,String Nrbedrooms,String rentorPrice,String isBooked);
 }

@@ -27,8 +27,8 @@ public interface Authentication {
         }
         
     }
-    public static int register(String name,String phoneNumber,String emailAddress,String password) {
-        int r = q.insertUser(name, phoneNumber, emailAddress, password);
+    public static int register(String name,String phoneNumber,String emailAddress,String password,String userType) {
+        int r = q.insertUser(name, phoneNumber, emailAddress, password,userType);
         return r;
     }
     public static int logout() {
